@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane style="-fx-background-color: FFFCEB;" styleClass="WholePage" stylesheets="@../../../../java/style/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.farmermarket.HelloController">
+   <children>
+      <BorderPane>
+         <center>
+            <Pane prefHeight="800.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="emailTF" alignment="CENTER" layoutX="454.0" layoutY="283.0" prefHeight="50.0" prefWidth="250.0" promptText="Email" />
+                  <PasswordField fx:id="passwordTF" alignment="CENTER" layoutX="452.0" layoutY="376.0" prefHeight="50.0" prefWidth="250.0" promptText="Password" />
+                  <Button fx:id="shopButton" layoutX="518.0" layoutY="494.0" mnemonicParsing="false" onAction="#shopButtonOnAction" prefHeight="49.0" prefWidth="122.0" text="Log In" />
+                  <Button layoutX="940.0" layoutY="654.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="213.0" text="Button" />
+                  <Label layoutX="491.0" layoutY="179.0" text="LOGIN">
+                     <font>
+                        <Font name="Times New Roman Bold" size="46.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </center>
+         <top>
+            <Pane prefHeight="123.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="279.0" layoutY="8.0" prefHeight="99.0" prefWidth="620.0" styleClass="text-id" stylesheets="@../../../../java/style/style.css" text="Farmer's Market">
+                     <font>
+                        <Font size="86.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</Pane>

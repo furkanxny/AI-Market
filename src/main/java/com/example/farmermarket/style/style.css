@@ -1,0 +1,26 @@
+.FMtitle{
+-fx-background-color:#FFFFFF;
+-fx-background-radius: 100;
+}
+
+.WholePage{
+-fx-background-color:#FFFCEB;
+}
+
+.addOrRemoveButton{
+    width: 100px; /* or any size */
+    height: 100px; /* must be the same as width to form a circle */
+    border-radius: 50%; /* this creates the circle */
+    background-color: #3498db; /* example color */
+}
+
+.text-id {
+ -fx-font-smoothing-type: lcd;
+ -fx-fill: white;
+ -fx-font-size: 68pt;
+}
+
+.button:hover
+{
+-fx-background-color:#FFFFFF;
+}
