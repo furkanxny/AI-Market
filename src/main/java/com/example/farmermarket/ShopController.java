@@ -1,7 +1,6 @@
 package com.example.farmermarket;
 
 import com.example.farmermarket.Models.Consumer;
-import com.example.farmermarket.Models.Person;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -24,6 +24,10 @@ public class ShopController implements Initializable {
 
     @FXML
     private Label nameLabel;
+    private static StringBuilder stringBuilder = new StringBuilder();
+    public static StringBuilder getStringBuilder(){
+        return stringBuilder;
+    }
 
     @FXML
     private Button toCheckoutButton;
@@ -72,6 +76,20 @@ public void initializeProducts(){
 }
 
     @FXML
+    void toAIButtonOnAction(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("AIChat.fxml"));
+        Parent secondViewRoot = loader.load();
+
+        // Get the current stage using the event source
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        // Set the new scene on the current stage
+        Scene scene = new Scene(secondViewRoot);
+        stage.setScene(scene);
+    }
+
+
+    @FXML
     void toCheckoutButtonOnAction(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Checkout.fxml"));
         Parent secondViewRoot = loader.load();
@@ -83,6 +101,23 @@ public void initializeProducts(){
         Scene scene = new Scene(secondViewRoot);
         stage.setScene(scene);
     }
+
+    public void addStrawberry() {
+        int i;
+        for (i = 1; i < 200; i++) {
+            if (i == 1) {
+                stringBuilder.append("\n1 Pound Strawberry = $4.99:\n ");
+            }
+        }
+    }
+
+
+    @FXML
+    void addStrawberry(MouseEvent event) {
+        addStrawberry();
+        System.out.println("Strawberry added!!");
+    }
+
     }
 
 

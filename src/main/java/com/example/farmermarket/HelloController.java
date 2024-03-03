@@ -3,10 +3,7 @@ package com.example.farmermarket;
 import com.example.farmermarket.Models.Consumer;
 import com.example.farmermarket.Models.Person;
 import com.google.api.core.ApiFuture;
-import com.google.cloud.firestore.Firestore;
-import com.google.cloud.firestore.FirestoreOptions;
-import com.google.cloud.firestore.QueryDocumentSnapshot;
-import com.google.cloud.firestore.QuerySnapshot;
+import com.google.cloud.firestore.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,20 +17,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ExecutionException;
 
 
 public class HelloController {
     private ArrayList<String> registeredEmailArryList = new ArrayList<>();
     private final ObservableList<Person> listOfPeople = FXCollections.observableArrayList();
-    public ObservableList<Person> getListOfUsers() {
-        return listOfPeople;
-    }
-
     @FXML
     private TextField emailTF;
     @FXML
@@ -41,7 +32,7 @@ public class HelloController {
     @FXML
     private Button shopButton;
     private Firestore firestore;
-    private boolean key;
+    private static boolean key;
     private Stage stage;
     Person person;
     private static String ID;
@@ -54,7 +45,6 @@ public class HelloController {
     public HelloController(){
         this.stage = new Stage();
         firestore = HelloApplication.fstore;
-
     }
 
     public boolean loginUser(String email, String password) {
