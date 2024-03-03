@@ -49,6 +49,8 @@ public class HelloController {
         this.ID = ID;
     }
 
+
+
     public HelloController(){
         this.stage = new Stage();
         firestore = HelloApplication.fstore;

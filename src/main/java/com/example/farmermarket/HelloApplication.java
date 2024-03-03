@@ -19,7 +19,7 @@ public class HelloApplication extends Application {
         fstore = contxtFirebase.firebase();
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1200, 800);
+        Scene scene = new Scene(fxmlLoader.load(), 505, 520);
         PrimaryStage.setTitle("Farmer's Market");
         PrimaryStage.setScene(scene);
         PrimaryStage.show();

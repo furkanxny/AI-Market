@@ -1,6 +1,7 @@
 package com.example.farmermarket;
 
 import com.example.farmermarket.Models.Consumer;
+import com.example.farmermarket.Models.Person;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +23,9 @@ import java.util.ResourceBundle;
 public class ShopController implements Initializable {
 
     @FXML
+    private Label nameLabel;
+
+    @FXML
     private Button toCheckoutButton;
     ImageView[] ImgViewArry = new ImageView[14];
     Image[] pngArry  =  new Image[14];
@@ -29,17 +33,13 @@ public class ShopController implements Initializable {
     @FXML
     private ImageView imageView1,imageView2,imageView3,imageView4,imageView5,imageView6,imageView7
             ,imageView8,imageView9,imageView10,imageView11,imageView12,imageView13,imageView14;
-    Consumer consumer = Consumer.getInstance();
     @FXML
-    private Label nameLabel;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        nameLabel.setText(consumer.getName());
+        nameLabel.setText(Consumer.getInstance().getName());
         initializeArrays();
         initializeImages();
         initializeProducts();
-
-
     }
 
     public void initializeArrays(){
