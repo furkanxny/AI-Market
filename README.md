@@ -66,3 +66,6 @@ Acknowledgments
 Farmers who provide fresh produce
 OpenAI for the ChatGPT API
 Firebase for backend solutions
+<img width="1440" alt="Shop" src="https://github.com/furkanxny/AI-Market/assets/116584632/98cad2c6-eb51-4a7e-925e-4b0d496eb79c">
+<img width="1440" alt="Mr  Recipe" src="https://github.com/furkanxny/AI-Market/assets/116584632/663c6dec-3100-4274-b1c8-7b3fa97950c8">
+
